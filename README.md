@@ -7,5 +7,5 @@ I am setting up a Kubernetes environment to gain a better understanding of how a
 ## Connecting to the VM Using iTerm2 on macOS
 ![image](https://github.com/user-attachments/assets/011c9fba-5137-4f26-829f-125e9a9253e9)
 Since I am using a terminal emulator for macOS (iTerm2), I split the pane vertically, enabled input broadcasting, and executed commands simultaneously on both the master and worker nodes.
-*// sudo su //*
+*** sudo su 
 ![image](https://github.com/user-attachments/assets/ef4b2538-20df-4e5d-8c7d-700c71158d19)
