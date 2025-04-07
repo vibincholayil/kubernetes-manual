@@ -66,6 +66,7 @@ systemctl restart containerd<br>
 systemctl enable containerd<br>
 systemctl status containerd<br>
 \`\`\`</code>
+![image](https://github.com/user-attachments/assets/ef4b2538-20df-4e5d-8c7d-700c71158d19)
 ### Run this only in Master node
 <code>\`\`\`kubeadm init --apiserver-advertise-address $(hostname -i) --pod-network-cidr=192.168.0.0/16<br>
 mkdir -p $HOME/.kube<br>
@@ -75,12 +76,17 @@ export KUBECONFIG=/etc/kubernetes/admin.conf<br>
 <br>
 kubectl apply -f https://raw.githubusercontent.com/projectcalico/calico/v3.28.1/manifests/calico.yaml<br>
 \`\`\`</code><br>
+![image](https://github.com/user-attachments/assets/83a394ec-f8c2-4c7b-b9b1-31254c4e6cbc)
+
 ### Run this only in Worker nodes
 <code>\`\`\`kubeadm join 10.0.0.4:6443 --token h7xpru.8vw3d10qzzf7rffr \
 	--discovery-token-ca-cert-hash sha256:4cb8bd267de0fdb2a2f9d9264e57f72dd4e60cfbd3c1ff81fa61f7413751677e\`\`\`</code><br>
  watch -n 1 kubectl get nodes
 
+![image](https://github.com/user-attachments/assets/2e352a76-0d82-46c7-aac4-d3285548f90d)
 
-
-
-![image](https://github.com/user-attachments/assets/ef4b2538-20df-4e5d-8c7d-700c71158d19)
+## Challenges of Setting Up a Kubernetes Cluster Manually
+ I found it difficult to connect the worker node to the master node while setting up the Kubernetes cluster. However, Mr. Vijay helped me by explaining the use of specific commands required for this task. He guided me on how to correctly execute the necessary commands to establish the connection, making the process much clearer.
+ 
+## Conclusion
+Setting up a Kubernetes cluster manually using kubeadm gives very useful hands-on experience. By learning how to set up and configure each part, developers can better understand how Kubernetes works. This helps in solving problems and improving the system later. Though it takes more time than using automatic tools, this method gives better knowledge and control over the Kubernetes setup.
