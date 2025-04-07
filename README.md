@@ -9,4 +9,5 @@ I am setting up a Kubernetes environment to gain a better understanding of how a
 Since I am using a terminal emulator for macOS (iTerm2), I split the pane vertically, enabled input broadcasting, and executed commands simultaneously on both the master and worker nodes.
 <code>\`\`\` sudo su <br>
 \`\`\`</code>
+
 ![image](https://github.com/user-attachments/assets/ef4b2538-20df-4e5d-8c7d-700c71158d19)
